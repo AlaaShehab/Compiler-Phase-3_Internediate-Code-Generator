@@ -1,0 +1,6 @@
+flex lex.l (this step produces lex.yy.c)
+bison -d syntax.y (this step produces syntax.tab.c, syntax.tab.h)
+g++ lex.yy.c syntax.tab.c (generates output a.out)
+a.exe  (executes a.out and needs code.txt file to produce bytecode)
+java -jar jasmin.jar myfile.j
+javap -c test.class
